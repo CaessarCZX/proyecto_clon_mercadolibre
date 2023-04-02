@@ -11,6 +11,10 @@ html{
     font-size: 14px;
 }
 
+a{
+    text-decoration: none;
+}
+
 a:any-link{
     cursor: pointer;
 }
@@ -73,6 +77,10 @@ a:any-link{
 
 .nav__container-banner--layout{
     grid-area: for-promotional;
+}
+
+.nav__container-cp--layout{
+    grid-area: for-cp-sel;
 }
 
 .nav__container__logo{
@@ -155,6 +163,45 @@ img.nav__search__button__icon{
 .nav__banner-banner{
     width: 340px;
     height: 39px;
+}
+
+.nav__container__cp{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.nav__container__cp::before{
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-image: url('../assets/icons8-digital-32.png');
+    background-repeat: no-repeat;
+    position: relative;
+    top: -7px;
+}
+
+
+#nav__container__cp__toLks{
+    display: flex;
+    flex-direction: column;
+}
+
+#nav__container__cp__lk1{
+    font-family: inherit;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#nav__container__cp__lk2{
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .content{
