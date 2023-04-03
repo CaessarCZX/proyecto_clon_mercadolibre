@@ -19,6 +19,10 @@ a:any-link{
     cursor: pointer;
 }
 
+li{
+    list-style-type: none;
+}
+
 :root{
     /* Colores para mercado-libre */
     --mercado-color: #fff159;
@@ -81,6 +85,10 @@ a:any-link{
 
 .nav__container-cp--layout{
     grid-area: for-cp-sel;
+}
+
+.nav__container-subnav--layout{
+    grid-area: for-nav-into;
 }
 
 .nav__container__logo{
@@ -191,7 +199,7 @@ img.nav__search__button__icon{
 #nav__container__cp__lk1{
     font-family: inherit;
     font-size: 10px;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.6);
     white-space: nowrap;
     text-overflow: ellipsis;
 }
@@ -202,6 +210,69 @@ img.nav__search__button__icon{
     color: #333;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.nav__into__order{
+    display: flex;
+}
+
+.nav__into__item{
+    display: flex;
+    align-items: flex-end;
+    height: 28px;
+    margin-right: 16px;
+}
+
+.nav__into__item:last-child{
+    margin: 0;
+}
+
+@media only screen and (max-width: 1199px) { 
+    .nav__into__item:nth-last-child(3){ 
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1099px){
+    .nav__into__item:nth-last-child(4){
+        display: none;
+    }
+}
+
+.nav__into__item__link{
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
+    height: min-content;
+}
+
+.nav__into__item__link--categ{
+    display: flex;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
+    height: min-content;
+    position: relative;
+    padding-right: 12px;
+}
+
+.nav__into__item__link:hover{
+    color: #333;
+}
+
+
+
+.nav__into__item__link--categ-decoration::after{
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    color: rgba(0,0,0,.3);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    
 }
 
 .content{
