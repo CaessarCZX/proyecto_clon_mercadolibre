@@ -91,6 +91,11 @@ li{
     grid-area: for-nav-into;
 }
 
+.nav__container-profnav--layout{
+    grid-area: for-account-actions;
+    
+}
+
 .nav__container__logo{
     display: flex;
     flex-wrap: wrap;
@@ -186,6 +191,7 @@ img.nav__search__button__icon{
     height: 28px;
     background-image: url('../assets/icons8-digital-32.png');
     background-repeat: no-repeat;
+    transform: scale(0.9);
     position: relative;
     top: -7px;
 }
@@ -258,8 +264,6 @@ img.nav__search__button__icon{
     color: #333;
 }
 
-
-
 .nav__into__item__link--categ-decoration::after{
     content: "";
     display: inline-block;
@@ -273,6 +277,55 @@ img.nav__search__button__icon{
     right: 0;
     bottom: 5px;
     
+}
+
+.nav__container__profile{
+    width: 100%;
+}
+
+.nav__profile{
+    display: flex;
+    justify-content: right;
+}
+
+/* .nav__profile::after{
+    content:"";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url('../assets/icons8-comprar-28.png');
+    transform: scaleY(0.8);
+    
+    background-repeat: no-repeat;
+    align-self: flex-end;
+} */
+
+.nav__profile__item{
+    display: flex;
+    height: 28px;
+    align-items: flex-end;
+    margin-left: 22px;
+}
+
+.nav__profile__item:nth-last-child(2){
+    margin: 0 22px;
+}
+
+.nav__profile__item:nth-last-child(1){
+    margin: 0;
+}
+
+.nav__profile__item__link{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000;
+    height: min-content;
+}
+
+.nav__profile__item__link__ico{
+    display: block;
+    width: 27px;
+    transform: scaleY(0.8);
 }
 
 .content{
