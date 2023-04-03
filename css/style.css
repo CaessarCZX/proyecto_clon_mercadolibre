@@ -33,7 +33,7 @@ li{
 
 .root{
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
     'header'
     'content'
@@ -337,9 +337,54 @@ img.nav__search__button__icon{
 }
 
 .footer{
-
+    display: block;
+    border-top: solid 1px #e6e6e6;
 }
 
 .footer--layout{
     grid-area: footer;
+}
+
+.nav__footer__container{
+    display: block;
+    flex-wrap: wrap;
+    padding: 16px 10px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav__footer{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.nav__footer__item{
+    display: block;
+    margin: 0 16px 8px 0;
+}
+
+.nav__footer__item:nth-last-child(1){
+    margin: 0;
+}
+
+.nav__footer__item__link{
+    font-family: inherit;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding-bottom: 8px;
+    height: min-content;
+}
+
+.nav__footer__copyright{
+    font-size: 11px;
+    color: #999;
+    padding-bottom: 2px;
+}
+
+.nav__footer__sec--info{
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
 }
