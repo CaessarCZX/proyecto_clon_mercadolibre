@@ -318,7 +318,7 @@ img.nav__search__button__icon{
 
 .content{
     display: grid;
-    grid-template-rows: repeat(7, auto);
+    grid-template-rows: repeat(8, auto);
     grid-template-areas: 
     'for-promotional-carousel'
     'for-secure-payment-banner'
@@ -330,8 +330,17 @@ img.nav__search__button__icon{
     'for-last-part';
 }
 
-.content--layout{
+.content.content--layout{
     grid-area: content;
+}
+
+.content__carousel{
+    display: flex;
+    width: 100%;
+}
+
+.content__carousel.content__carousel--layout{
+    grid-area: for-promotional-carousel;
 }
 
 .footer{
