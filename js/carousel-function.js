@@ -1,9 +1,9 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.content__carousel__swiper', {
     direction: 'horizontal',
     loop: true,
 
     autoplay: {
-        delay: 5000,
+        delay: 4000,
         pauseOnMouseEnter: true,
         disableOnInteractiIon: false,
     },
