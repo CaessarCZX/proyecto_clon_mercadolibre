@@ -497,6 +497,10 @@ img.nav__search__button__icon{
     font-size: 0.9rem;
 }
 
+.payment__item__link.text__link:hover {
+    color: #5463c6;
+}
+
 .payment__item__link.last__block{
     margin-right: 16px;
 }
