@@ -523,19 +523,32 @@ img.nav__search__button__icon{
     background-position: left -99px;
 }
 
-.content__benefits__promo{
-    display: flex;
-    max-width: 1200px;
+.content__benefits {
+    display: block;
     padding: 40px 0;
-    margin: 0 auto;
 }
 
-.content__benefits__promo--layout {
+.content__benefits--layout {
     grid-area: for-mercado-benefits;
 }
 
+@media screen and (max-width: 769px) {
+    .content__benefits {
+        padding: 30px 0;
+        margin: 0 10px;
+    }
+}
+
+.content__benefits__promo{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1204px;
+    margin: 0 auto;
+}
+
 .benefits__promo__wrapper {
-    width: 1180px;
+    width: 100%;
+    margin: 0 10px;
     background-color: #fff;
     border-radius: 6px;
     overflow: hidden;
@@ -604,6 +617,7 @@ img.nav__search__button__icon{
 .benefits__promo__body__benefits {
     display: flex;
     margin-top: 32px;
+    justify-content: space-evenly;
 }
 
 .benefits__promo__body__benefit {
