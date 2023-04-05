@@ -66,6 +66,7 @@ button {
 .advertising {
     display: flex;
     height: 250px;
+    max-width: 100%;
     border-radius: 4px;
     background-color: #fff;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
@@ -94,6 +95,12 @@ button {
     font-weight: 600;
     line-height: 1;
 
+}
+
+@media screen and (max-width: 769px) {
+    .advertising__info__title {
+        width: 100px;
+    }
 }
 
 .advertising__info__text {
@@ -126,13 +133,15 @@ button {
 .advertising__image {
     display: block;
     height: 250px;
-    min-width: 290px;
+    flex: 0 0 auto;
 }
 
 .advertising__image img {
     float: right;
+    object-fit: cover;
     height: 100%;
-    width: auto;
+    width: 100%;
+
 }
 
 .nav-header{
@@ -774,18 +783,19 @@ img.nav__search__button__icon{
     grid-area: for-discover-offerts;
 }
 
+@media screen and (max-width: 769px) {
+    .content__discover__ml {
+        margin: 0 15px;
+        padding: 30px 0;
+    }    
+}
+
+
 .discover__ml__wrapper {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1200px;
-}
-
-@media screen and (max-width: 769px) {
-    .discover__ml__wrapper {    
-        margin: 0 10px;
-        padding: 30px 0;
-    }    
 }
 
 .discover__ml__cards {
