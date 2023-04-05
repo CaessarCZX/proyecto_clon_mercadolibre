@@ -11,6 +11,17 @@ html{
     font-size: 14px;
 }
 
+html:root{
+    /* Colores para mercado-libre */
+    --mercado-color: #fff159;
+    --bg-principal-1: #e7e7e7;
+    --bg-principal-2: #ebebeb;
+    --border-col: #e6e6e6;
+    --button-active-ml: #3483fa;
+    --button-hover-ml: #2968c8;
+    --advertising-color-text: #4b4b4b;
+}
+
 a{
     text-decoration: none;
 }
@@ -23,12 +34,9 @@ li{
     list-style-type: none;
 }
 
-:root{
-    /* Colores para mercado-libre */
-    --mercado-color: #fff159;
-    --bg-principal-1: #e7e7e7;
-    --bg-principal-2: #ebebeb;
-    --border-col: #e6e6e6;
+button {
+    border: none;
+    cursor: pointer;
 }
 
 .root{
@@ -41,6 +49,90 @@ li{
     font-family: 'Montserrat',-apple-system, Roboto, Arial, sans-serif;
     min-height: 100%;
     border-collapse: collapse;
+}
+
+.section__title__ml{
+    display: flex;
+    width: min-content;
+    margin-bottom: 22px;
+}
+
+.section__title__ml h2{
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0 0 0 8px;
+}
+
+.advertising {
+    display: flex;
+    height: 250px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    overflow: hidden;
+    transition: box-shadow .1s ease-out;
+}
+
+.advertising:hover {
+    box-shadow: 0 7px 16px 0 rgba(0,0,0,.2), 0 1px 3px 0 rgba(0,0,0,.1);
+}
+
+.advertising__info{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex: 1 1 auto;
+    margin-right: 32px;
+    padding: 32px 0 32px 32px;
+}
+
+.advertising__info__title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;    
+    color: var(--advertising-color-text);
+    font-weight: 600;
+    line-height: 1;
+
+}
+
+.advertising__info__text {
+    font-size: 25px;
+    color: var(--advertising-color-text);
+}
+
+.advertisin__info__text--bold {
+    font-weight: 600;
+}
+
+.advertising__info__button {
+    width: 96px;
+    height: 36px;;
+    font-size: 0.9rem;
+    line-height: 1;
+    border-radius: 2px;
+    font-weight: 600;
+    margin-top: 13px;
+    padding: 9px 10px;
+    color: #fff;
+    background-color: var(--button-active-ml);
+    transition: background-color 0.3s;
+}
+
+.advertising__info__button:hover {
+    background-color: var(--button-hover-ml);
+}
+
+.advertising__image {
+    display: block;
+    height: 250px;
+    min-width: 290px;
+}
+
+.advertising__image img {
+    float: right;
+    height: 100%;
+    width: auto;
 }
 
 .nav-header{
@@ -493,12 +585,12 @@ img.nav__search__button__icon{
 
 .payment__item__link.text__link {
     display: block;
-    color: #3483fa;
+    color: var(--button-active-ml);
     font-size: 0.9rem;
 }
 
 .payment__item__link.text__link:hover {
-    color: #5463c6;
+    color: var(--button-hover-ml);
 }
 
 .payment__item__link.last__block{
@@ -671,6 +763,39 @@ img.nav__search__button__icon{
 
 .promo__action__button:hover {
     background-color: #2968c8;
+}
+
+.content__discover__ml {
+    display: block;
+    padding: 40px 0;
+}
+
+.content__discover__ml--layout{
+    grid-area: for-discover-offerts;
+}
+
+.discover__ml__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media screen and (max-width: 769px) {
+    .discover__ml__wrapper {    
+        margin: 0 10px;
+        padding: 30px 0;
+    }    
+}
+
+.discover__ml__cards {
+    display: flex;
+    padding: 0 8px;
+}
+
+.discover__ml__cards .advertising:first-child {
+    margin-bottom: 15px;
+    margin-right: 15px;
 }
 
 .footer{
