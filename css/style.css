@@ -33,13 +33,13 @@ li{
 
 .root{
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: repeat(3, auto);
     grid-template-areas: 
     'header'
     'content'
     'footer';
     font-family: 'Montserrat',-apple-system, Roboto, Arial, sans-serif;
-    min-height: 100vh;
+    min-height: 100%;
     border-collapse: collapse;
 }
 
@@ -322,8 +322,8 @@ img.nav__search__button__icon{
     'for-promotional-carousel'
     'for-secure-payment-banner'
     'for-offerts'
-    'for-pormotional-banner'
     'for-mercado-benefits'
+    'for-pormotional-banner'
     'for-discover-offerts'
     'for-best-stores'
     'for-last-part';
@@ -517,6 +517,142 @@ img.nav__search__button__icon{
     width: 118px;
     height: 18px;
     background-position: left -99px;
+}
+
+.content__benefits__promo{
+    display: flex;
+    max-width: 1200px;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.content__benefits__promo--layout {
+    grid-area: for-mercado-benefits;
+}
+
+.benefits__promo__wrapper {
+    width: 1180px;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+.benefits__promo__header {
+    display: flex;
+    min-height: 55px;
+    padding: 16px 24px;
+    background: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+    color: #fff;
+    justify-content: space-between;
+}
+
+.benefits__promo__header__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    line-height: 2;
+}
+
+.benefits__promo__header__separator {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.benefits__promo__header__separator::before {
+    border-left: 2px solid #fff;
+    content: "";
+    height: 45px;
+    left: -8px;
+    position: absolute;
+    top: 0;
+}
+
+.benefits__promo__preprice {   
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.benefits__promo__price--bold {
+    font-weight: 600;
+    font-size: 24px;
+    width: fit-content;
+}
+
+.benefits__promo__price__period {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.benefits__promo__body{
+    display: block;
+    padding: 24px;
+}
+
+.benefits__promo__body__title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.benefits__promo__body__benefits {
+    display: flex;
+    margin-top: 32px;
+}
+
+.benefits__promo__body__benefit {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.benefits__promo__body__benefit__logo {
+    border: 1px solid #efefef;
+    border-radius: 50%;
+    height: 72px;
+    min-height: 72px;
+    min-width: 72px;
+    overflow: hidden;
+    width: 72px;
+}
+
+.benefits__promo__body__logo__img {
+    height: auto;
+    width: 100%;
+}
+
+.benefits__promo__body__benefit__des {
+    display: inline;
+    margin: 0 16px;
+    width: 100%;
+}
+
+.benefits__promo__action {
+    display: flex;
+    padding: 16px 30px;
+    border-top: solid 1px #ededed;
+    align-items: center;
+    justify-content: right;
+}
+
+.promo__action__button {
+    background-color: #3483fa;
+    border-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.promo__action__button:hover {
+    background-color: #2968c8;
 }
 
 .footer{
