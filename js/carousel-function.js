@@ -19,3 +19,17 @@ const swiper = new Swiper('.content__carousel__swiper', {
     },
   
   });
+
+const swiper_1 = new Swiper('.swiper__offerts', {
+    direction: 'horizontal',
+    loop: false,
+
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+  });
